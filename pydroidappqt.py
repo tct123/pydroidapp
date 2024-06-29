@@ -1,7 +1,7 @@
 import locale
 from mylocale.TR import tr
 import sys
-from qtpy import QtWidgets, QtCore
+from qtpy import QtWidgets, QtCore, QtGui
 
 lang = locale.getlocale()[0]
 print(lang)
@@ -9,8 +9,9 @@ file = "localisation.csv"
 app = QtWidgets.QApplication(sys.argv)
 window = QtWidgets.QMainWindow()
 appbar = QtWidgets.QTabBar(window)
-appbar.addr
+#appbar.addr
 label = QtWidgets.QLabel(tr(csv_file=file, target_key="HELLO", langcode=lang))
+button = QtWidgets.QPushButton(icon=QtGui.QIcon("github.png"))
 label.setAlignment(QtCore.Qt.AlignCenter)
 label.setWordWrap(True)
 window.setCentralWidget(label)
